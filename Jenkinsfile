@@ -22,14 +22,14 @@ pipeline {
         stage('Login to ECR') {
             steps {
                 powershell """
-                Write-Host "Starting ECR Login..."
-                \$password = aws ecr get-login-password --region ${AWS_REGION}
+                Write-Host "Retrieving ECR Password..."
+                \$password = (aws ecr get-login-password --region ${AWS_REGION}).Trim()
                 if (\$LASTEXITCODE -ne 0) { throw "AWS Login Password retrieval failed!" }
                 
-                \$ecr_url = "${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+                \$ecr_url = "${AWS_ACC_ID}".Trim() + ".dkr.ecr.${AWS_REGION}.amazonaws.com"
                 Write-Host "Logging into: \$ecr_url"
                 
-                \$password | docker login --username AWS --password-stdin \$ecr_url
+                docker login --username AWS --password \$password \$ecr_url
                 """
             }
         }
@@ -38,8 +38,8 @@ pipeline {
             steps {
                 dir('server') {
                     powershell """
+                    \$ecr_url = "${AWS_ACC_ID}".Trim() + ".dkr.ecr.${AWS_REGION}.amazonaws.com"
                     docker build -t ${ECR_BACKEND_REPO}:${BUILD_NUMBER} .
-                    \$ecr_url = "${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
                     docker tag ${ECR_BACKEND_REPO}:${BUILD_NUMBER} "\$ecr_url/${ECR_BACKEND_REPO}:${BUILD_NUMBER}"
                     docker tag ${ECR_BACKEND_REPO}:${BUILD_NUMBER} "\$ecr_url/${ECR_BACKEND_REPO}:latest"
                     docker push "\$ecr_url/${ECR_BACKEND_REPO}:${BUILD_NUMBER}"
@@ -53,8 +53,8 @@ pipeline {
             steps {
                 dir('client') {
                     powershell """
+                    \$ecr_url = "${AWS_ACC_ID}".Trim() + ".dkr.ecr.${AWS_REGION}.amazonaws.com"
                     docker build -t ${ECR_FRONTEND_REPO}:${BUILD_NUMBER} .
-                    \$ecr_url = "${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
                     docker tag ${ECR_FRONTEND_REPO}:${BUILD_NUMBER} "\$ecr_url/${ECR_FRONTEND_REPO}:${BUILD_NUMBER}"
                     docker tag ${ECR_FRONTEND_REPO}:${BUILD_NUMBER} "\$ecr_url/${ECR_FRONTEND_REPO}:latest"
                     docker push "\$ecr_url/${ECR_FRONTEND_REPO}:${BUILD_NUMBER}"
@@ -68,8 +68,7 @@ pipeline {
             steps {
                 powershell """
                 aws eks update-kubeconfig --region ${AWS_REGION} --name ${CLUSTER_NAME}
-                
-                \$ecr_url = "${AWS_ACC_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
+                \$ecr_url = "${AWS_ACC_ID}".Trim() + ".dkr.ecr.${AWS_REGION}.amazonaws.com"
                 
                 (Get-Content -Path k8s/backend.yaml -Raw) -replace 'image: .*internmatch-backend:.*', "image: \$ecr_url/${ECR_BACKEND_REPO}:${BUILD_NUMBER}" | Set-Content -Path k8s/backend.yaml
                 (Get-Content -Path k8s/frontend.yaml -Raw) -replace 'image: .*internmatch-frontend:.*', "image: \$ecr_url/${ECR_FRONTEND_REPO}:${BUILD_NUMBER}" | Set-Content -Path k8s/frontend.yaml
