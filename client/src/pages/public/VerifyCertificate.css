@@ -1,0 +1,16 @@
+.vc-page { min-height: 100vh; background: var(--clr-bg); display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
+.vc-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 48px 40px; max-width: 480px; width: 100%; text-align: center; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+.vc-logo { font-size: 0.8rem; font-weight: 700; letter-spacing: 3px; color: var(--clr-primary); text-transform: uppercase; }
+.vc-valid-icon { width: 72px; height: 72px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 3px solid #10B981; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #10B981; }
+.vc-valid-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #10B981; }
+.vc-valid-sub   { color: var(--clr-text-2); font-size: 0.9rem; }
+.vc-invalid-icon { width: 72px; height: 72px; border-radius: 50%; background: rgba(239,68,68,0.12); border: 3px solid #EF4444; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #EF4444; }
+.vc-invalid-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: #EF4444; }
+.vc-invalid-sub   { color: var(--clr-text-2); font-size: 0.9rem; }
+.vc-details { width: 100%; display: flex; flex-direction: column; gap: 10px; background: var(--clr-surface-2); border-radius: var(--radius-md); padding: 20px; text-align: left; }
+.vc-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; gap: 12px; }
+.vc-row span { color: var(--clr-text-2); flex-shrink: 0; }
+.vc-row strong { color: var(--clr-text-1); text-align: right; }
+.vc-cert-id { font-family: monospace; color: var(--clr-primary); font-size: 0.85rem; }
+.vc-skills { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.vc-skill { padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; background: var(--clr-primary-dim); color: var(--clr-primary); border: 1px solid var(--clr-primary); }

@@ -1,0 +1,11 @@
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill-tag {
+  border-radius: var(--radius-sm); font-weight: 500; white-space: nowrap;
+  transition: all var(--transition);
+}
+.skill-tag-sm  { padding: 3px 9px; font-size: 0.75rem; }
+.skill-tag-md  { padding: 5px 12px; font-size: 0.85rem; }
+.skill-tag-default { background: var(--clr-surface-2); color: var(--clr-text-2); border: 1px solid var(--clr-border); }
+.skill-tag-primary { background: var(--clr-primary-dim); color: var(--clr-primary); border: 1px solid rgba(0,212,200,0.3); }
+.skill-tag-accent  { background: var(--clr-accent-dim);  color: var(--clr-accent);  border: 1px solid rgba(245,158,11,0.3); }
+.skill-tag-more    { background: var(--clr-surface-2); color: var(--clr-text-3); font-size: 0.72rem; padding: 3px 9px; }

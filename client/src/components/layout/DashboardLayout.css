@@ -1,0 +1,152 @@
+.dash-shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--clr-bg);
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────── */
+.dash-sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: var(--clr-surface);
+  border-right: 1px solid var(--clr-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 100;
+  transition: transform var(--transition-slow);
+}
+
+.dash-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 24px 24px;
+  border-bottom: 1px solid var(--clr-border);
+}
+.dash-logo-mark {
+  width: 36px; height: 36px;
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800; font-size: 0.85rem;
+  letter-spacing: -0.5px;
+}
+.dash-logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--clr-text);
+}
+
+.dash-nav {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dash-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--clr-text-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.dash-nav-item:hover { color: var(--clr-text); background: var(--clr-surface-2); }
+.dash-nav-item.active {
+  color: var(--clr-primary);
+  background: var(--clr-primary-dim);
+}
+.dash-nav-icon { font-size: 1rem; width: 20px; text-align: center; }
+
+.dash-sidebar-footer {
+  padding: 16px 12px;
+  border-top: 1px solid var(--clr-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dash-user-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--clr-surface-2);
+}
+.dash-avatar {
+  width: 32px; height: 32px;
+  background: var(--clr-primary-dim);
+  border: 1px solid var(--clr-primary);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--clr-primary);
+  font-weight: 700; font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.dash-user-info { display: flex; flex-direction: column; min-width: 0; }
+.dash-user-name { font-size: 0.82rem; font-weight: 600; color: var(--clr-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dash-user-role { font-size: 0.72rem; color: var(--clr-primary); text-transform: capitalize; }
+
+.dash-logout-btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  color: var(--clr-text-2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  text-align: left;
+}
+.dash-logout-btn:hover { color: var(--clr-danger); background: rgba(239,68,68,0.1); }
+
+/* ── Main content ─────────────────────────────────────────────────────── */
+.dash-main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.dash-topbar {
+  height: 60px;
+  background: var(--clr-surface);
+  border-bottom: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0; z-index: 50;
+}
+.dash-hamburger { display: none; font-size: 1.2rem; color: var(--clr-text-2); padding: 4px; }
+.dash-topbar-right { display: flex; align-items: center; gap: 12px; }
+.dash-greeting { font-size: 0.9rem; color: var(--clr-text-2); }
+.dash-content { padding: 32px 28px; flex: 1; }
+
+/* ── Mobile ───────────────────────────────────────────────────────────── */
+.dash-overlay { display: none; }
+
+@media (max-width: 768px) {
+  .dash-sidebar { transform: translateX(-100%); }
+  .dash-sidebar.open { transform: translateX(0); }
+  .dash-main { margin-left: 0; }
+  .dash-hamburger { display: block; }
+  .dash-overlay {
+    display: block;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 90;
+  }
+  .dash-content { padding: 20px 16px; }
+}

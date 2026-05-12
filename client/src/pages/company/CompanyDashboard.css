@@ -1,0 +1,41 @@
+.co-dash { display: flex; flex-direction: column; gap: 24px; animation: fadeUp 0.4s ease; }
+.co-hero {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  background: var(--clr-surface); border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg); padding: 32px; position: relative; overflow: hidden;
+}
+.co-hero::before {
+  content: ""; position: absolute; top: -80px; right: -80px; width: 250px; height: 250px;
+  background: radial-gradient(circle, var(--clr-primary-glow), transparent 70%); pointer-events: none;
+}
+.co-hero-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; }
+.co-hero-sub { color: var(--clr-text-2); font-size: 0.9rem; margin-top: 4px; }
+.co-hero-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.co-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.co-stat-card {
+  background: var(--clr-surface); border: 1px solid var(--clr-border);
+  border-top: 3px solid; border-radius: var(--radius-md);
+  padding: 20px; display: flex; align-items: center; gap: 14px;
+}
+.co-stat-icon { font-size: 1.4rem; opacity: 0.7; }
+.co-stat-value { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; line-height: 1; }
+.co-stat-label { font-size: 0.78rem; color: var(--clr-text-2); margin-top: 2px; }
+.co-int-table { display: flex; flex-direction: column; gap: 0; }
+.co-int-head {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 12px; padding: 8px 12px;
+  font-size: 0.75rem; font-weight: 700; color: var(--clr-text-3);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.co-int-row {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 12px; align-items: center; padding: 12px;
+  border-top: 1px solid var(--clr-border);
+  transition: background var(--transition);
+}
+.co-int-row:hover { background: var(--clr-surface-2); }
+.co-int-title { font-size: 0.88rem; font-weight: 600; }
+.co-int-duration { font-size: 0.75rem; color: var(--clr-text-3); }
+.co-int-loc, .co-int-apps { font-size: 0.82rem; color: var(--clr-text-2); }
+.co-empty { text-align: center; padding: 32px; color: var(--clr-text-2); display: flex; flex-direction: column; gap: 12px; align-items: center; }
+@media (max-width: 900px) { .co-stats { grid-template-columns: 1fr 1fr; } .co-int-head { display: none; } .co-int-row { grid-template-columns: 1fr auto; gap: 8px; } }

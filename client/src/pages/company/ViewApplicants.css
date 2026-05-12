@@ -1,0 +1,47 @@
+.va-page   { display: flex; flex-direction: column; gap: 20px; animation: fadeUp 0.4s ease; }
+.va-header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.va-back   { color: var(--clr-text-2); font-size: 0.88rem; text-decoration: none; }
+.va-back:hover { color: var(--clr-primary); }
+.va-title  { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; }
+.va-count  { background: var(--clr-surface-2); border-radius: 999px; padding: 2px 10px; font-size: 0.82rem; color: var(--clr-text-2); }
+
+.va-list   { display: flex; flex-direction: column; gap: 14px; }
+.va-card   { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-md); padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+.va-card-locked { border-color: var(--clr-border-light); opacity: 0.92; }
+
+.va-card-top { display: flex; align-items: center; gap: 14px; }
+.va-rank   { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--clr-primary-dim); border: 1px solid var(--clr-primary); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: var(--clr-primary); font-size: 0.85rem; flex-shrink: 0; }
+.va-info   { flex: 1; min-width: 0; }
+.va-name-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 2px; }
+.va-name   { font-weight: 700; font-size: 1rem; }
+.va-email  { font-size: 0.78rem; color: var(--clr-text-2); }
+
+.va-cert-badge  { padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; background: rgba(16,185,129,0.12); color: #10B981; border: 1px solid rgba(16,185,129,0.3); }
+.va-locked-note { padding: 2px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; background: var(--clr-surface-2); color: var(--clr-text-3); border: 1px solid var(--clr-border); }
+
+.va-scores { display: flex; align-items: center; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+.va-match-score { display: flex; flex-direction: column; align-items: center; }
+.va-match-num   { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: var(--clr-primary); line-height: 1; }
+.va-match-label { font-size: 0.65rem; color: var(--clr-text-3); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.va-skills { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.va-skills-label { font-size: 0.78rem; color: var(--clr-text-2); flex-shrink: 0; }
+
+.va-ai-exp { display: flex; gap: 8px; align-items: flex-start; background: var(--clr-surface-2); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 0.82rem; color: var(--clr-text-2); line-height: 1.5; }
+.va-ai-badge { font-size: 0.7rem; font-weight: 700; color: var(--clr-primary); white-space: nowrap; }
+
+.va-ats-toggle { background: var(--clr-surface-2); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); padding: 7px 14px; font-size: 0.8rem; font-weight: 600; color: var(--clr-text-2); cursor: pointer; text-align: left; transition: all 0.15s; align-self: flex-start; }
+.va-ats-toggle:hover { border-color: var(--clr-primary); color: var(--clr-primary); }
+
+.va-actions { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 8px; border-top: 1px solid var(--clr-border); align-items: center; }
+.va-cert-id { font-size: 0.82rem; color: var(--clr-text-2); padding: 6px 12px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: var(--radius-sm); }
+.va-cert-id strong { color: var(--clr-primary); font-family: monospace; font-size: 0.88rem; }
+.va-locked-msg { font-size: 0.8rem; color: var(--clr-text-3); font-style: italic; }
+.va-empty  { text-align: center; padding: 60px; color: var(--clr-text-2); }
+
+/* Confirm modal */
+.va-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; backdrop-filter: blur(4px); }
+.va-confirm { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 36px 32px; max-width: 400px; width: 90%; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; animation: fadeUp 0.3s ease; }
+.va-confirm h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; }
+.va-confirm p  { color: var(--clr-text-2); font-size: 0.88rem; line-height: 1.5; }
+.va-confirm-actions { display: flex; gap: 10px; margin-top: 4px; }

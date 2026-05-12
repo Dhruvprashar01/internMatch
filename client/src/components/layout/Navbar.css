@@ -1,0 +1,11 @@
+.navbar {
+  height: 64px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; background: var(--clr-surface); border-bottom: 1px solid var(--clr-border);
+  position: sticky; top: 0; z-index: 100;
+}
+.navbar-brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--clr-text); }
+.navbar-logo-mark { width: 32px; height: 32px; background: var(--clr-primary); color: var(--clr-bg); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; }
+.navbar-links { display: flex; align-items: center; gap: 12px; }
+.navbar-link { font-size: 0.88rem; color: var(--clr-text-2); font-weight: 500; }
+.navbar-cta { padding: 8px 18px; background: var(--clr-primary); color: var(--clr-bg); border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 700; transition: filter var(--transition); }
+.navbar-cta:hover { filter: brightness(1.1); opacity: 1; }

@@ -1,0 +1,34 @@
+.mj-page   { display: flex; flex-direction: column; gap: 20px; animation: fadeUp 0.4s ease; }
+.mj-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.mj-title  { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; }
+.mj-sub    { font-size: 0.85rem; color: var(--clr-text-2); margin-top: 3px; }
+.mj-filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.mj-search  { flex: 1; min-width: 220px; background: var(--clr-surface-2); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); padding: 10px 14px; color: var(--clr-text-1); font-size: 0.88rem; }
+.mj-search:focus { outline: none; border-color: var(--clr-primary); }
+.mj-tabs   { display: flex; gap: 6px; }
+.mj-tab    { padding: 8px 16px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; border: 1px solid var(--clr-border); background: var(--clr-surface); color: var(--clr-text-2); cursor: pointer; transition: all 0.15s; }
+.mj-tab.active, .mj-tab:hover { border-color: var(--clr-primary); color: var(--clr-primary); background: var(--clr-primary-dim); }
+.mj-table-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--clr-border); }
+.mj-table  { width: 100%; border-collapse: collapse; font-size: 0.87rem; }
+.mj-table th { padding: 12px 16px; text-align: left; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--clr-text-3); border-bottom: 1px solid var(--clr-border); background: var(--clr-surface-2); }
+.mj-table td { padding: 12px 16px; border-bottom: 1px solid var(--clr-border); vertical-align: middle; }
+.mj-table tr:last-child td { border-bottom: none; }
+.mj-table tbody tr:hover { background: var(--clr-surface-2); }
+.mj-job-title    { font-weight: 600; }
+.mj-job-duration { font-size: 0.78rem; color: var(--clr-text-2); }
+.mj-company { color: var(--clr-text-2); }
+.mj-loc     { color: var(--clr-text-2); font-size: 0.83rem; }
+.mj-apps    { font-weight: 600; color: var(--clr-primary); }
+.mj-date    { color: var(--clr-text-3); font-size: 0.8rem; }
+.mj-status  { padding: 3px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; border: 1px solid; text-transform: capitalize; }
+.mj-btn     { padding: 5px 12px; border-radius: var(--radius-sm); font-size: 0.78rem; font-weight: 600; border: none; cursor: pointer; font-family: var(--font-body); }
+.mj-btn-danger { background: rgba(239,68,68,0.15); color: #EF4444; }
+.mj-btn-danger:hover { background: rgba(239,68,68,0.25); }
+.mj-btn-ghost  { background: var(--clr-surface-2); color: var(--clr-text-2); border: 1px solid var(--clr-border); }
+.mj-empty   { text-align: center; padding: 40px; color: var(--clr-text-2); }
+.mj-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 999; backdrop-filter: blur(4px); }
+.mj-confirm-box { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); padding: 32px; max-width: 380px; width: 90%; text-align: center; animation: fadeUp 0.3s ease; }
+.mj-confirm-box h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+.mj-confirm-box p  { color: var(--clr-text-2); font-size: 0.88rem; line-height: 1.5; margin-bottom: 24px; }
+.mj-confirm-actions { display: flex; gap: 10px; justify-content: center; }
+.mj-confirm-actions .mj-btn { padding: 10px 24px; font-size: 0.9rem; }

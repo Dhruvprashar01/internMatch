@@ -1,0 +1,39 @@
+.pi-page { display: flex; flex-direction: column; gap: 24px; max-width: 860px; animation: fadeUp 0.4s ease; }
+.pi-header { margin-bottom: 4px; }
+.pi-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; }
+.pi-sub { color: var(--clr-text-2); margin-top: 4px; }
+.pi-form { display: flex; flex-direction: column; gap: 20px; }
+.pi-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pi-span-2 { grid-column: 1 / -1; }
+.pi-field { display: flex; flex-direction: column; gap: 5px; }
+.pi-field label { font-size: 0.82rem; font-weight: 600; color: var(--clr-text-2); }
+.pi-input, .pi-textarea, .pi-select {
+  background: var(--clr-surface-2); border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm); color: var(--clr-text); padding: 9px 12px;
+  font-size: 0.9rem; width: 100%; font-family: var(--font-body);
+  transition: all var(--transition);
+}
+.pi-input:focus, .pi-textarea:focus, .pi-select:focus { border-color: var(--clr-primary); box-shadow: 0 0 0 3px var(--clr-primary-dim); }
+.pi-textarea { resize: vertical; min-height: 120px; }
+.pi-checkboxes { display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+.pi-checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--clr-text-2); cursor: pointer; }
+.pi-checkbox-label input { accent-color: var(--clr-primary); width: 16px; height: 16px; }
+.pi-skills-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.pi-skills-label { font-size: 0.82rem; font-weight: 600; color: var(--clr-text-2); margin-bottom: 8px; }
+.pi-skill-input-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.pi-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.pi-chip {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--clr-surface-2); border: 1px solid var(--clr-border);
+  color: var(--clr-text-2); border-radius: 999px; padding: 3px 10px;
+  font-size: 0.78rem; font-weight: 600;
+}
+.pi-chip button { color: inherit; opacity: 0.6; font-size: 0.7rem; }
+.pi-chip button:hover { opacity: 1; }
+.pi-chip-primary { background: var(--clr-primary-dim); border-color: rgba(0,212,200,0.3); color: var(--clr-primary); }
+.pi-resp-list { display: flex; flex-direction: column; gap: 8px; }
+.pi-resp-row { display: flex; gap: 8px; align-items: center; }
+.pi-resp-remove { color: var(--clr-text-3); font-size: 0.8rem; flex-shrink: 0; }
+.pi-resp-remove:hover { color: var(--clr-danger); }
+.pi-submit-row { display: flex; justify-content: flex-end; gap: 12px; }
+@media (max-width: 700px) { .pi-grid-2, .pi-skills-section { grid-template-columns: 1fr; } }

@@ -1,0 +1,37 @@
+.cp2-page   { display: flex; flex-direction: column; gap: 20px; animation: fadeUp 0.4s ease; max-width: 760px; }
+.cp2-header { display: flex; justify-content: space-between; align-items: center; }
+.cp2-title  { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; }
+
+/* Verification banner */
+.cp2-verify-banner {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; padding: 18px 20px; border-radius: var(--radius-md); flex-wrap: wrap;
+}
+.cp2-verify-left  { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.cp2-verify-status{ font-weight: 700; font-size: 1rem; }
+.cp2-verify-desc  { font-size: 0.85rem; color: var(--clr-text-2); line-height: 1.5; max-width: 500px; }
+.cp2-verify-desc strong { color: var(--clr-text-1); }
+
+/* Form */
+.cp2-form     { display: flex; flex-direction: column; gap: 16px; padding: 4px; }
+.cp2-row      { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 600px) { .cp2-row { grid-template-columns: 1fr; } }
+.cp2-field    { display: flex; flex-direction: column; gap: 6px; }
+.cp2-field label { font-size: 0.82rem; font-weight: 600; color: var(--clr-text-2); text-transform: uppercase; letter-spacing: 0.04em; }
+.cp2-optional { font-weight: 400; color: var(--clr-text-3); text-transform: none; letter-spacing: 0; }
+.cp2-input, .cp2-select, .cp2-textarea {
+  background: var(--clr-surface-2); border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm); color: var(--clr-text-1);
+  padding: 10px 12px; font-size: 0.9rem; font-family: var(--font-body);
+  transition: border-color 0.2s; width: 100%;
+}
+.cp2-input:focus, .cp2-select:focus, .cp2-textarea:focus {
+  outline: none; border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px var(--clr-primary-dim);
+}
+.cp2-textarea { resize: vertical; min-height: 110px; }
+.cp2-verify-note {
+  background: var(--clr-surface-2); border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm); padding: 12px 14px;
+  font-size: 0.82rem; color: var(--clr-text-2); line-height: 1.5;
+}

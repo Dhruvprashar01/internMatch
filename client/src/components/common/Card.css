@@ -1,0 +1,20 @@
+.card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+.card-pad-sm  { padding: 16px; }
+.card-pad-md  { padding: 20px; }
+.card-pad-lg  { padding: 28px; }
+.card-pad-none{ padding: 0; }
+.card-glow { box-shadow: var(--shadow-glow); border-color: var(--clr-border-light); }
+.card-clickable { cursor: pointer; }
+.card-clickable:hover { border-color: var(--clr-primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.card-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 20px; gap: 12px;
+}
+.card-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--clr-text); }
+.card-subtitle { font-size: 0.85rem; color: var(--clr-text-2); margin-top: 2px; }
+.card-action { flex-shrink: 0; }

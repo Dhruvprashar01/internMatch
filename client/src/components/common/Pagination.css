@@ -1,0 +1,11 @@
+.pagination { display: flex; align-items: center; gap: 4px; }
+.pg-btn {
+  min-width: 32px; height: 32px; border-radius: var(--radius-sm);
+  border: 1px solid var(--clr-border); background: var(--clr-surface);
+  color: var(--clr-text-2); font-size: 0.85rem; font-family: var(--font-body);
+  cursor: pointer; transition: all var(--transition);
+}
+.pg-btn:hover:not(:disabled) { border-color: var(--clr-primary); color: var(--clr-primary); }
+.pg-btn.active { background: var(--clr-primary-dim); border-color: var(--clr-primary); color: var(--clr-primary); font-weight: 700; }
+.pg-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.pg-ellipsis { color: var(--clr-text-3); padding: 0 4px; }

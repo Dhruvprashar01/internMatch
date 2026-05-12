@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend-service:
+    build: ./server
+    container_name: internmatch-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/internMatch
+      - NODE_ENV=development
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./client
+    container_name: internmatch-frontend
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend-service
+
+volumes:
+  mongo-data:

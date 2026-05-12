@@ -1,0 +1,20 @@
+.ma-page   { display: flex; flex-direction: column; gap: 20px; animation: fadeUp 0.4s ease; }
+.ma-title  { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; }
+.ma-sub    { font-size: 0.85rem; color: var(--clr-text-2); margin-top: 3px; }
+.ma-tabs   { display: flex; gap: 6px; flex-wrap: wrap; }
+.ma-tab    { padding: 7px 16px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; border: 1px solid var(--clr-border); background: var(--clr-surface); color: var(--clr-text-2); cursor: pointer; transition: all 0.15s; }
+.ma-tab.active { border-color: var(--clr-primary); color: var(--clr-primary); background: var(--clr-primary-dim); }
+.ma-table-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--clr-border); }
+.ma-table  { width: 100%; border-collapse: collapse; font-size: 0.87rem; }
+.ma-table th { padding: 12px 16px; text-align: left; font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--clr-text-3); border-bottom: 1px solid var(--clr-border); background: var(--clr-surface-2); }
+.ma-table td { padding: 12px 16px; border-bottom: 1px solid var(--clr-border); vertical-align: middle; }
+.ma-table tr:last-child td { border-bottom: none; }
+.ma-table tbody tr:hover { background: var(--clr-surface-2); }
+.ma-cand-name  { font-weight: 600; }
+.ma-cand-email { font-size: 0.78rem; color: var(--clr-text-2); }
+.ma-job        { font-weight: 500; }
+.ma-company    { color: var(--clr-text-2); }
+.ma-score      { font-family: var(--font-display); font-weight: 700; }
+.ma-status     { padding: 3px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; border: 1px solid; text-transform: capitalize; }
+.ma-date       { color: var(--clr-text-3); font-size: 0.8rem; }
+.ma-empty      { text-align: center; padding: 40px; color: var(--clr-text-2); }
