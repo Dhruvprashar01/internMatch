@@ -1,4 +1,5 @@
 # InternMatch AI — Smart Allocation Engine for Internship Matching
+[![CI/CD Status](https://img.shields.io/badge/CI%2FCD-Automated-green)](http://localhost:8080)
 
 > A full-stack MERN platform that uses **Google Gemini AI** and a **multi-dimensional matching engine** to intelligently connect candidates with internship opportunities.
 
