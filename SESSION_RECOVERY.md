@@ -26,8 +26,8 @@
 When you open your laptop tomorrow, run this to re-sync your terminal:
 ```powershell
 # Set credentials (if not saved)
-$env:AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
-$env:AWS_SECRET_ACCESS_KEY="YOUR_SECRET_KEY"
+$set AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
 $env:AWS_DEFAULT_REGION="us-east-1"
 
 # Re-sync Kubeconfig
