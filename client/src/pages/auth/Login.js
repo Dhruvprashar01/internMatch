@@ -56,7 +56,7 @@ const Login = () => {
                 <div className="auth-brand-inner">
                     <div className="auth-logo-mark">IM</div>
                     <h1 className="auth-brand-title">InternMatch AI</h1>
-                    <p className="auth-brand-sub">Next-Gen Internship Matching powered by Google Gemini AI</p>
+                    <p className="auth-brand-sub">AI-Powered Internship Matching by Team InternMatch</p>
                     <div className="auth-brand-stats">
                         <div className="auth-stat"><span className="auth-stat-num">10K+</span><span>Internships</span></div>
                         <div className="auth-stat"><span className="auth-stat-num">50K+</span><span>Candidates</span></div>
