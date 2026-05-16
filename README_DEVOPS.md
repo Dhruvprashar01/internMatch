@@ -97,3 +97,7 @@ Access Grafana at `http://GRAFANA_SERVICE_URL:3000` to view real-time metrics fo
 - Pod CPU/Memory utilization.
 - Request latency.
 - Error rates.
+
+
+kubectl port-forward svc/grafana-service -n monitoring 3000:3000
+kubectl port-forward svc/prometheus-service -n monitoring 9090:9090
