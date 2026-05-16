@@ -1,15 +1,15 @@
 {
-  "name": "internmatch-ai-platform",
-  "version": "1.0.0",
-  "description": "AI-Based Smart Allocation Engine for Internship Matching",
-  "scripts": {
-    "server": "cd server && npm run dev",
-    "client": "cd client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
-    "build": "cd client && npm run build"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+    "name": "internmatch-ai-platform",
+    "version": "1.0.0",
+    "description": "AI-Based Smart Allocation Engine for Internship Matching",
+    "scripts": {
+        "server": "cd server && npm run dev",
+        "client": "cd client && npm start",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+        "build": "cd client && npm run build"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
 }
